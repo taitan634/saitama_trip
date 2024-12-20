@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>気分レコメンド</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #2e8b57;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #2e8b57;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        a:hover {
+            background-color: #3cb371;
+        }
+        .kibunform {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #2e8b57;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #3cb371;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/">TOPへ戻る</a>
+    <h1>気分診断のページです！</h1>
+
+    <div class="kibunform">
+        <form action="/kibun2" method="POST">
+            <label><input type="checkbox" name="fav" value="楽しい">楽しい</label>
+            <label><input type="checkbox" name="fav" value="どきどき">どきどき</label>
+            <label><input type="checkbox" name="fav" value="怖い">怖い</label>
+            <label><input type="checkbox" name="fav" value="ゆったり">ゆったり</label>
+            <label><input type="checkbox" name="fav" value="悔しい">悔しい</label>
+            <label><input type="checkbox" name="fav" value="落ち着く">落ち着く</label>
+            <label><input type="checkbox" name="fav" value="感動">感動</label>
+            <label><input type="checkbox" name="fav" value="驚き">驚き</label> 
+            <!--nameタグを必ず"fav"にしてください！app.pyの方でname属性がfavのやつ拾ってます！-->
+            <input type="submit" value="今の気分を送信!">
+        </form>
+    </div>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
